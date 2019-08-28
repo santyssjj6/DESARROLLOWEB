@@ -2,13 +2,17 @@
 <html>
 <head>
 	<title>Enviarme Mensaje</title>
+	<link rel="stylesheet" type="text/css" href="maqueta1.css">
 </head>
 <body>
-	<div><h1>Enviar mensaje</h1></div>
-	<dt>Correos con los que me puede contactar</dt>
-	<dd>santyssjj5@gmail.com</dd>
-	<dd>santyssjj6@gmail.com</dd><br>
-
+<div id="centro">
+	<div id="arriba"><h1>Enviar mensaje</h1></div>
+	<div id="arriba">
+		<dt>Correos con los que me puede contactar</dt>
+		<dd>santyssjj5@gmail.com</dd>
+		<dd>santyssjj6@gmail.com</dd><br>
+	</div>
+<div id="cuerpo">
 	<FORM ACTION=../tema3/“recibir.php&quot; METHOD="GET"
 enctype="multipart/form-data">
  <br/><INPUT TYPE="text" NAME="nombre"> Correo
@@ -17,11 +21,14 @@ enctype="multipart/form-data">
 	<textarea name="textarea" rows="10" cols="50"></textarea>Mensaje <br>
 </div>
 
+
 <div><h4>Sexo</h4></div>
 
   <input type="radio" name="genero" value="masculino"> Masculino<br>
   <input type="radio" name="genero" value="femenino"> Femenino<br>
   <input type="radio" name="genero" value="otros"> Otros <br>
  <button type="button">Enviar Mensaje</button>
+</div>
+</div>
 </body>
 </html>

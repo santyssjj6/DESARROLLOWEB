@@ -1,0 +1,22 @@
+#contenedor {
+	width: 900px;
+	margin: 0 auto;
+
+}
+#arriba {
+	width: 800px;
+	height: 100px;
+	background: #1c4fa3;
+}
+#cuerpo {
+	width:800px;
+	height: 400px;
+	background: #6d83a6;
+}
+#centro{
+	margin: 0 auto;
+	text-align: center;
+	width: 400px;
+	height:300px;
+	border:1px solid #00d6f7;
+}

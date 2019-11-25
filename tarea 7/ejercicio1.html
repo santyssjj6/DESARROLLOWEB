@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicio 1</title>
+	<style type="text/css">
+		#panel{
+			width: 300px;
+			height: 300px;
+			border-color: black;
+			margin-top: black;
+		}
+	</style>
+</head>
+	<script type="text/javascript">
+
+		function rojo()
+		{
+			var fondo=document.getElementById("fondo");
+			if(fondo.checked)
+				document.getElementById("panel").style.backgroundColor="red";
+			else
+				document.getElementById("panel").style.color="red";
+		}
+		function amarillo()
+		{
+			var fondo=document.getElementById("fondo");
+			if(fondo.checked)
+				document.getElementById("panel").style.backgroundColor="yellow";
+			else
+				document.getElementById("panel").style.color="yellow";
+		}
+		function verde()
+		{
+			var fondo=document.getElementById("fondo");
+			if(fondo.checked)
+				document.getElementById("panel").style.backgroundColor="green";
+			else
+				document.getElementById("panel").style.color="green";
+		}
+	</script>
+<body>
+	<DIV id=""centro>
+	<form>
+		<input type="button" value="rojo" onclick="rojo()"><br><br>
+		<input type="button" value="amarillo" onclick="amarillo()"><br><br>
+		<input type="button" value="verde" onclick="verde()"><br><br>
+		<input type="radio" name="opcion" value="fondo" id="fondo"> Fondo
+		<input type="radio" name="opcion" value="primerplano" id="primerplano"> Primer Plano
+	</form>
+	<div id="panel">
+		<br><br>
+		<center><h1>Color</h1></center><br><br><br><br>
+		<a href="index.html">Volver</a>
+
+	</div>
+</DIV>
+</body>
+</html>

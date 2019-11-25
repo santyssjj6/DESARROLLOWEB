@@ -1,0 +1,55 @@
+*{
+margin: 0 auto;
+}/*margin es para alejar por fuera, border es el borde y padding es el alejamiento por dentro del div*/
+.cuerpo{
+	width: 900px;
+	height: 602px;
+	border: 2px solid black; 
+}
+.cabecera{
+	background-color: #ABC8DE;
+	height: 200px;
+	width: 900px;
+	border-bottom: 2px solid black;
+	text-align: center;
+}
+#cabeceraImagen{
+	height: 200px;
+	width: 200px;
+	float: left;
+}
+#cabeceraContenido{
+	height: 200px;
+	width: 700px;
+}
+.menu{
+	background-color: black;
+	width: 120px;
+	height: 400px;
+	float: left;
+	border-right: 2px solid black;
+	text-align: left;
+	padding-left: 0;
+	padding-right: 10;
+}
+.contenido{
+	background-color: gray;
+	width: 778px;
+	height: 400px;
+	display: inline-block;
+	margin: 0 auto;
+}
+ul.menu li a:link, ul.menu li a:visited {
+padding: .3em;
+display: block;
+text-decoration: none;
+color: #333;
+background: #F4F4F4;
+border-top:1px solid #7C7C7C;
+border-right:1px solid #7C7C7C;
+border-bottom:1px solid #9C9C9C;
+text-align: left;
+}
+ul.menu li a:hover{
+	background-color: #FC0;
+}

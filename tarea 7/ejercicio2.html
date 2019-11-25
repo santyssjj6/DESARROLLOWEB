@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Ejercicio 2</title>
+	<style type="text/css">
+		
+		.contenedorInput{
+
+			width: 900px;
+			height: 200px;
+		}
+		input{
+			margin-left: 10px;
+			margin-top: 10px;
+		}
+		#volverAjugar{
+			display: none;
+		}
+	</style>
+</head>
+<body>
+
+	  <div class="contenedorInput">
+	  	
+	  </div>
+	  <button onclick="evaluar()">evaluar</button>
+	  <button id="volverAjugar" onclick="volverAjugar()">Volver a jugar</button>
+		
+ 	  <div id="res"></div>
+	<script type="text/javascript">
+		let resultado="profesor";
+
+		function limpiar(){
+				document.getElementsByClassName('contenedorInput')[0].innerHTML="";
+				document.getElementById('res').innerHTML="";
+				llenarInput();
+
+		}
+
+		function llenarInput(){
+			for(var i=0;i<resultado.length;i++){
+				document.getElementsByClassName('contenedorInput')[0].innerHTML+="<input type='text' class='inputValue'/>";
+			}
+
+			let sug1=Math.floor(Math.random()*((resultado.length-1)-0+1))+1;
+			let sug2=Math.floor(Math.random()*((resultado.length-1)-0+1))+1;
+
+			if(sug1===sug2){
+				if(sug1<resultado.length){
+					sug1++;
+				}else if(sug2<resultado.length){
+					sug2++;
+				}else sug1--;
+			}
+
+			document.getElementsByClassName('inputValue')[sug1].value=resultado[sug1];
+			document.getElementsByClassName('inputValue')[sug2].value=resultado[sug2];
+
+
+		}
+
+		let cont=1;
+		function evaluar(){
+			let win=true;
+			for(let i=0;i<resultado.length;i++){
+				if(resultado[i]!==document.getElementsByClassName('inputValue')[i].value){
+					win=false;
+				}
+			}
+		
+
+			if(win){
+				document.getElementById('res').innerHTML="ganaste";
+				document.getElementById('volverAjugar').style.display="block";
+				
+			}else{
+				document.getElementById('res').innerHTML="no es correcto";
+			}
+
+			if(cont===7){
+				document.getElementById('res').innerHTML="perdiste";
+				document.getElementById('volverAjugar').style.display="block";
+
+			}else{
+				cont++;
+			}
+
+		}
+
+		function volverAjugar(){
+			cont=1;
+			document.getElementById('volverAjugar').style.display="none";
+			limpiar();
+		}
+
+		console.log(1);
+		llenarInput();
+
+	</script>
+	<br><br><br><br>
+		<a href="index.html">Volver</a>
+</body>
+</html>
